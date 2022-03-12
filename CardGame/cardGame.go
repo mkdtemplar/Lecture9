@@ -49,7 +49,7 @@ func (d DeckOfCards) DealOneCard() *DeckOfCards {
 		errors.New("Deck is empty")
 	}
 
-	return &d
+	return nil
 	panic("implement me")
 }
 
