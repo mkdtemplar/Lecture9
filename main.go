@@ -4,6 +4,7 @@ import (
 	cardDraw "Lecture9/CardDraw"
 	"Lecture9/CardGame"
 	"fmt"
+	"log"
 )
 
 func main() {
@@ -16,13 +17,15 @@ func main() {
 
 	var dc2 cardDraw.Dealer = dc
 
-	//deck1 := cardGame.InitializeDeck(dc)
+	if dc2.Done() {
+		log.Fatal("Card deck is empty")
+	} else {
+		cardDraw.DrawAllCards(dc2)
+		fmt.Println()
 
-	cardDraw.DrawAllCards(dc2)
-	fmt.Println()
+		cardDraw.DealOneCard(dc2)
 
-	fmt.Println(cardDraw.DealOneCard(dc2))
-
-	fmt.Println()
+		fmt.Println()
+	}
 
 }

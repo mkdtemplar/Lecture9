@@ -12,13 +12,11 @@ type Dealer interface {
 	Done() bool
 }
 
-func DealOneCard(c Dealer) error {
+func DealOneCard(c Dealer) {
 
 	c.DealOneCard()
-	return nil
 }
 
-func DrawAllCards(dealer Dealer) error {
+func DrawAllCards(dealer Dealer) {
 	dealer.Deal()
-	return nil
 }
